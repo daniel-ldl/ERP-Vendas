@@ -1,0 +1,45 @@
+﻿@{
+    ViewData["Title"] = "Alterar Cliente";
+}
+
+<h6>Alterar Cliente</h6>
+
+<div class="pt-5">
+
+    <form>
+        <div class="form-row">
+            <div class="col-md-4 mb-3">
+                <label for="NomeFantasia">Nome Fantasia</label>
+                <input type="text" class="form-control" id="TxtNomeFantasia" required>
+            </div>
+            <div class="col-md-4 mb-3">
+                <label for="RazaoSocial">Razão Social</label>
+                <input type="text" class="form-control" id="TxtRazaoSocial" required>
+            </div>
+            <div class="col-md-4 mb-3">
+                <label for="CPF">CPF</label>
+                <div class="input-group">
+                    <input type="text" class="form-control" id="TxtCPF" required>
+                </div>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-md-3 mb-3">
+                <label for="Estado">Estado</label>
+                <input type="text" class="form-control" id="CbEstado" required>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="Cidade">Cidade</label>
+                <input type="text" class="form-control" id="CbCidade" required>
+            </div>
+            <div class="col-md-3 mb-3">
+                <label for="CEP">CEP</label>
+                <input type="text" class="form-control" id="TxtCep" required>
+            </div>
+        </div>
+
+        <button class="btn btn-primary" type="submit">Salvar Alterações</button>
+        <a class="btn btn-secondary" asp-controller="Cliente" asp-action="Index" role="button">Cancelar</a>
+    </form>
+
+</div>
