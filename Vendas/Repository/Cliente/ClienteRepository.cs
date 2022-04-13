@@ -17,6 +17,11 @@ namespace Vendas.Repository.Cliente
             _bancoContext = bancoContext;
         }
 
+        public List<ClienteModel> GetAllClient()
+        {
+            return _bancoContext.Cliente.ToList();
+        }
+
         public ClienteModel Insert(ClienteModel cliente)
         {
             //insert

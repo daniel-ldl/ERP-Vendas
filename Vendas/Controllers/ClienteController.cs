@@ -20,7 +20,8 @@ namespace Vendas.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            List<ClienteModel> client = _clienteRepository.GetAllClient();
+            return View(client);
         }
 
         public IActionResult Create()
