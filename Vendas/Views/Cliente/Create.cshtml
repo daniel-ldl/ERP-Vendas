@@ -27,15 +27,39 @@
         <div class="form-row">
             <div class="col-md-3 mb-3">
                 <label for="Estado">Estado</label>
-                <input type="text" class="form-control" id="CbEstado" required>
+                <select asp-for="UF" id="CbbEstado" class="form-control">
+                    <option selected>Selecione...</option>
+                </select>
             </div>
             <div class="col-md-6 mb-3">
                 <label for="Cidade">Cidade</label>
-                <input type="text" class="form-control" id="CbCidade" required>
+                <select asp-for="Cidade" id="CbbCidade" class="form-control">
+                    <option selected>Selecione...</option>
+                </select>
             </div>
             <div class="col-md-3 mb-3">
                 <label for="CEP">CEP</label>
-                <input type="text" class="form-control" id="TxtCep" required>
+                <input asp-for="CEP" type="text" class="form-control" id="TxtCep" required>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-md-3 mb-3">
+                <label for="Telefone">Telefone</label>
+                <div class="input-group">
+                    <input asp-for="Telefone" type="text" class="form-control" id="TxtTelefone">
+                </div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <label for="Celular">Celular</label>
+                <div class="input-group">
+                    <input asp-for="Celular" type="text" class="form-control" id="TxtCelular">
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="Email">E-mail</label>
+                <div class="input-group">
+                    <input asp-for="Email" type="text" class="form-control" id="TxtEmail">
+                </div>
             </div>
         </div>
 
@@ -44,3 +68,7 @@
     </form>
 
 </div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.8/jquery.mask.js"></script>
+<script type="text/javascript" src="~/js/Client/CreateClient.js"></script>

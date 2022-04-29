@@ -8,6 +8,7 @@ namespace Vendas.Repository.Cliente
 {
     public interface IClienteRepository
     {
+        ClienteModel GetClientById(int Id);
         List<ClienteModel> GetAllClient();
         ClienteModel Insert(ClienteModel cliente);
     }

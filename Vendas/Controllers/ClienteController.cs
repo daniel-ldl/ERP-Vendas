@@ -29,9 +29,10 @@ namespace Vendas.Controllers
             return View();
         }
 
-        public IActionResult Update()
+        public IActionResult Update(int ClientId)
         {
-            return View();
+            ClienteModel client = _clienteRepository.GetClientById(ClientId);
+            return View(client);
         }
 
         public IActionResult Delete()

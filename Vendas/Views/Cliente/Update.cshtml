@@ -1,4 +1,5 @@
-﻿@{
+﻿@model Vendas.Models.Cliente.ClienteModel
+@{
     ViewData["Title"] = "Alterar Cliente";
 }
 
@@ -6,20 +7,20 @@
 
 <div class="pt-5">
 
-    <form>
+    <form asp-controller="Cliente" asp-action="Update" method="post">
         <div class="form-row">
             <div class="col-md-4 mb-3">
                 <label for="NomeFantasia">Nome Fantasia</label>
-                <input type="text" class="form-control" id="TxtNomeFantasia" required>
+                <input asp-for="NomeFantasia" type="text" class="form-control" id="TxtNomeFantasia" required>
             </div>
             <div class="col-md-4 mb-3">
                 <label for="RazaoSocial">Razão Social</label>
-                <input type="text" class="form-control" id="TxtRazaoSocial" required>
+                <input asp-for="RazaoSocial" type="text" class="form-control" id="TxtRazaoSocial" required>
             </div>
             <div class="col-md-4 mb-3">
                 <label for="CPF">CPF</label>
                 <div class="input-group">
-                    <input type="text" class="form-control" id="TxtCPF" required>
+                    <input asp-for="CPF" type="text" class="form-control" id="TxtCPF" required>
                 </div>
             </div>
         </div>
@@ -38,7 +39,7 @@
             </div>
         </div>
 
-        <button class="btn btn-primary" type="submit">Salvar Alterações</button>
+        <button class="btn btn-primary" type="submit">Salvar</button>
         <a class="btn btn-secondary" asp-controller="Cliente" asp-action="Index" role="button">Cancelar</a>
     </form>
 

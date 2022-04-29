@@ -22,6 +22,11 @@ namespace Vendas.Repository.Cliente
             return _bancoContext.Cliente.ToList();
         }
 
+        public ClienteModel GetClientById(int Id)
+        {
+            return _bancoContext.Cliente.FirstOrDefault(client => client.Id == Id);
+        }
+
         public ClienteModel Insert(ClienteModel cliente)
         {
             //insert

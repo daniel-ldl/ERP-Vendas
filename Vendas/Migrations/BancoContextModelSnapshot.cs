@@ -25,16 +25,40 @@ namespace Vendas.Migrations
                         .HasColumnType("integer")
                         .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
 
+                    b.Property<string>("CEP")
+                        .HasColumnType("text");
+
                     b.Property<string>("CPF")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Celular")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Cidade")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Email")
                         .HasColumnType("text");
 
                     b.Property<string>("NomeFantasia")
                         .HasColumnType("text");
 
+                    b.Property<string>("RG")
+                        .HasColumnType("text");
+
                     b.Property<string>("RazaoSocial")
                         .HasColumnType("text");
 
+                    b.Property<string>("Sexo")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Status")
+                        .HasColumnType("text");
+
                     b.Property<string>("Telefone")
+                        .HasColumnType("text");
+
+                    b.Property<string>("UF")
                         .HasColumnType("text");
 
                     b.HasKey("Id");
